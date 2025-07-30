@@ -102,7 +102,7 @@ export default {
         // console.log(mesajText.value);
 
         const yeniMesaj={
-          içerik:mesajText.value,
+          icerik:mesajText.value,
           kimden:kullaniciUID,
           kime:"admin",
           olusturulmaTarihi:tarih(),

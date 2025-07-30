@@ -4,18 +4,18 @@
     <ul class="right">
       <span v-if="adminBtn || yetkiliBtn">
         <li>
-          <a class="waves-effect waves-red btn-flat navbar-btn">Sergi</a>
+          <router-link :to="{name:'SergiOlustur'}" class="waves-effect waves-red btn-flat navbar-btn">Sergi</router-link >
         </li>
          <li>
-          <a class="waves-effect waves-red btn-flat navbar-btn">Resim</a>
+          <router-link :to="{name:'ResimEkle'}" class="waves-effect waves-red btn-flat navbar-btn">Resim</router-link >
         </li>
       </span>
       <span v-if="adminBtn">
         <li>
-          <a class="waves-effect waves-red btn-flat navbar-btn">Yönetim</a>
+          <router-link :to="{name:'Yonetim'}" class="waves-effect waves-red btn-flat navbar-btn">Yönetim</router-link >
         </li>
          <li>
-          <a class="waves-effect waves-red btn-flat navbar-btn">Mesajlar</a>
+            <router-link :to="{name:'Mesajlar'}" class="waves-effect waves-ref btn-flat navbar-btn" >Mesajlar</router-link>
         </li>
       </span>
         <li>
@@ -34,6 +34,7 @@ import { onMounted,ref} from 'vue';
 import { authRef,firestoreRef} from '@/firebase/config';  
 import { useRouter } from 'vue-router'; 
 import getUser from '@/composables/getUser'
+import Yonetim from '@/views/admin/Yonetim.vue';
 export default {
   setup(){
 
